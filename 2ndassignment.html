@@ -1,32 +1,224 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=!, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>The Differences Between var,let and const</h1>
-                <p><b>var:-</b> var variables can be updated and re-declared within its scope<br>
-                    var variables are initialized with undefined <br>
-                    <i>example.</i>>console.log(x);
-                    var x=5;
-                    console.log(x);
-                </p>
-                 <p><b>let:-</b>let variables can be updated but not re-declared<br>
-                         let variables are not initialized.<br>
-                         <i>example.</i>console.log(x);
-                         let x=5;
-                         console.log(x);
-                         </p>
-                  <p><b>const:-</b>const variables can neither be updated nor re-declared. <br>
-                                  They are all hoisted to the top of their scope.<br>
-                                   const variables are not initialized.<br>
-                                   <i>example.</i>
-                                    const x = 12; 
-                                    x = 13; 
-                                    x += 1; 	
-                                </p>				 
-                                
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>explain with example methods of String and Array</h1>
+   
+
+                                          
+           <!--string-->
+
+    <h2>JavaScript String Methods</h2>
+
+
+<!--search()-->
+
+
+<p>The search() method searches a string for a specified value and returns the position of the match:</p>
+
+
+<p id="demo"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+document.getElementById("demo").innerHTML = pos;
+</script>
+
+
+<!--slice()-->
+
+<p>slice() extracts a part of a string and returns the extracted part in a new string.<p>
+
+        <p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,13);
+document.getElementById("demo").innerHTML = res; 
+</script>
+
+
+<!--substring()-->
+
+<p>substring() is similar to slice().
+
+    The difference is that substring() cannot accept negative indexes.</p>
+
+    <p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7,13);
+document.getElementById("demo").innerHTML = res;
+</script>
+
+
+<!--substr()-->
+
+<p>substr() is similar to slice().
+
+    The difference is that the second parameter specifies the length of the extracted part.<p>
+
+
+        <p id="demo"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7,6);
+document.getElementById("demo").innerHTML = res;
+</script>
+
+<!--replace(): The replace() method replaces a specified value with another value in a string-->
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var txt = str.replace("Microsoft","W3Schools");
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+
+<!--concat() :joins two or more strings-->
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo"></p>
+
+<script>
+var text1 = "Hello";
+var text2 = "World!";
+var text3 = text1.concat(" ",text2);
+document.getElementById("demo").innerHTML = text3;
+</script>
+
+
+<!-- trim(): The trim() method removes whitespace from both sides of a string-->
+
+<p>Click the button to alert the string with removed whitespace.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> The trim() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+function myFunction() {
+  var str = "     Hello World!     ";
+  alert(str.trim());
+}
+</script>
+
+
+<!-- charCodeAt() -->
+
+<p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "HELLO WORLD";
+document.getElementById("demo").innerHTML = str.charCodeAt(0);
+</script>
+
+
+
+             <!--Array-->
+
+<h2>JavaScript Array Methods</h2>
+
+
+<!--join(): The join() method also joins all array elements into a string.-->
+
+<p>the join() method joins array elements into a string.</p>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+</script>
+
+
+<!--slice():With clever parameter setting, you can use splice()
+     to remove elements without leaving "holes" in the array-->
+
+<p>The splice() methods can be used to remove array elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+function myFunction() {
+    fruits.splice(0, 1);
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+
+<!--!sort():The sort() method sorts an array alphabetically-->
+
+
+<p>The sort() method sorts an array alphabetically.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.sort();
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+<!--valueof(): The valueOf() method is the default behavior for an array.
+     It converts an array to a primitive value.
+ JavaScript will automatically convert an array to a string when a primitive value is expected-->
+
+    <p>JavaScript automatically converts an array to a string when a primitive value is expected.</p>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+</script>
+
+<!--join(): The join() method returns the array as a string.
+    The elements will be separated by a specified separator. The default separator is comma (,)-->
+
+
+    <p>Click the button to join the array elements into a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  var x = document.getElementById("demo");
+  x.innerHTML = fruits.join(" and ");
+}
+</script>
+
+
+</body>
+</html>

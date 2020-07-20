@@ -1,18 +1,53 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ASSIGNMENT 3 DAY 4</title>
-</head>
+ <title>marks</title>
+ <style type="text/css">
+  ul{
+   border: 1px solid;
+   position: relative;
+   left: 35%;
+   top: 10%;
+   width: 300px;
+   height: 100px;
+   padding-top: 30px;
 
+
+  }
+  .input{
+   margin-top: 30px;
+  }
+ </style>
+</head>
 <body>
-  <h2>ASSIGNMENT 3 DAY 4</h2>
-  <script>
-    let shoppingList=["Rice","Coffee Powder","Sugar","Salt"];
-    let shoppingBasket=[...shoppingList];
-    shoppingBasket.push("Wheat Flour");
-    console.log(`ShoppingList = ${shoppingList}\nShoppingBasket = ${shoppingBasket}`);
-  </script>
+ <ul>
+  <form>
+   <label>Enter Your Markes</label>
+   <input type="text"  name="number" id="uval" placeholder="enetr number">
+   <button type="button" class="input" onclick="std_grad()">Click to check</button>
+  </form>
+  <div id="rblock"></div>
+   </ul>
+ <script type="text/javascript">
+  function std_grad(){
+   var x = document.getElementById("uval").value;
+   x = parseInt(x);
+   if(x >= 80){
+    console.log("Maekes are  " + x + "  and  grade is'A+'");
+   }
+   else if(x <= 79 && x >= 60){
+    console.log("Markes are  " + x + "  and  grade is'A'");
+   }
+   else if(x <= 59 && x >= 40){
+    console.log("Markes are  " + x + "  and  grade is'B'");
+   }
+   else if(x <= 39 && x >= 35){
+    console.log("Markes are  " + x + "  and  grade is'C'");
+   }else{
+    console.log("Markes are  " + x + "  and  grade is'surprise You did not get any grade'");
+   }
+  }
+ </script>
+
 </body>
 </html>

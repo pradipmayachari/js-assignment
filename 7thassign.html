@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ASSIGNMENT 7 DAY 4</title>
+  
+
+</head>
+
+<body>
+  <h2>ASSIGNMENT 7 DAY 4</h2>
+  <script>
+    let range =prompt("Enter the range");
+    
+    for (var count = 1; count <= range; count++) {
+
+    let notPrime = false;
+    for (let i = 2; i <= count; i++) {
+        if (count%i===0 && i!==count) {
+            notPrime = true;
+        }
+    }
+    if (notPrime === false) {
+                console.log(count);
+    }
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ASSIGNMENT 4 DAY 4</title>
+  
+
+</head>
+
+<body>
+  <h2>ASSIGNMENT 4 DAY 4</h2>
+  <script>
+  function addition(){
+    let number1=prompt("Enter number 1");
+    let number2=prompt("Enter number 2");
+    console.log(`Addition of two numbers :${number1+number2}`)
+  }
+  function subtraction(){
+    let number1=prompt("Enter number 1");
+    let number2=prompt("Enter number 2");
+    let result = Math.abs(number1-number2);
+    console.log(`Difference of two numbers :${result}`)
+  }
+  function product(){
+    let number1=prompt("Enter number 1");
+    let number2=prompt("Enter number 2");
+    let result = (number1*number2);
+    console.log(`Product of two numbers :${result}`)
+  }
+  function division(){
+    let number1=prompt("Enter number 1");
+    let number2=prompt("Enter number 2");
+    let result = (number1/number2);
+    console.log(`Division of two numbers :${result}`)
+  }
+  function percentage(){
+    let number1=prompt("Enter number");
+    let number2=prompt("Enter the percent");
+    result=(number1*(number2/100));
+    console.log(`${number2}% of ${number1} is ${result}`);
+  }
+  function squareroot(){
+    let number1=prompt("Enter the number");
+    result=Math.sqrt(number1);
+    console.log(`Squre root of ${number1} is ${result}`);
+    
+  }
+  
+  
+  
+  
+  
+    let choice=prompt("Enter the choice");
+    switch(choice){
+      case'+':
+        addition();
+        break;
+      case '-':
+        subtraction();
+        break;
+      case '*':
+        product();
+        break;
+      case '/':
+        division();
+        break;
+      case '%':
+        percentage();
+        break;
+      case '√':
+        squareroot();
+        break;
+      
+    }
+  </script>
+</body>
+</html>

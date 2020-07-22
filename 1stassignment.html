@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
-    <script>
+<html>
 
-var num = prompt("Please enter a positive no.(i.e. no. greater than or eual to 0)")
-var arr=[];
-var i = 0;
-
-for (i=0;i<=num;i++){
-    arr.push(i)
-}
-let odd = arr.filter(el=>el%2!=0)
-let cube = odd.map(el=>el**3) 
-
-console.log(`The odd numbers are: ${odd}`)
-console.log(`The cubes of those odd numbers are: ${cube}`)
-
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 1</title>
+    </head>
 <body>
-    
+
+<h2>JavaScript Prompt for user input and output in console</h2>
+
+<p>click on the try it and open the console by pressing <mark>F12</mark></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+    console.log(txt);
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+    console.log(txt);
+  }
+  console.log(person);
+}
+</script>
+
 </body>
 </html>

@@ -1,383 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2</title>
+    <title>ASSIGNMENT 2</title>
+<style>
+body {
+background: #F4F4F4;
+font-family: Arial;
+margin: 0;
+}
+</style>
 </head>
 <body>
-  <h1><mark>Q-2 String and Array with Examples</mark></h1>
-  
-  <h2>String Length</h2>
-  <p> var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";</p>
-  
-  <script>
-    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    // console.log(txt.length);
-    document.write(txt.length);
-  </script>
-
-  <h2>indexOf() method returns the position of the first occurrence of a specified text</h2>
-  <pre> 
-    var str = "Please locate where 'locate' occurs!";
-    var pos = str.indexOf("locate");
-    document.write(pos);</pre>
-
-  <script>
-      var str = "Please locate where 'locate' occurs!";
-      var pos = str.indexOf("locate");
-      document.write(pos);
-  </script>
-
-<h2>lastIndexOf() method returns the index of the last occurrence of a specified text in a string</h2>
-<pre>
-  var str = "Please locate where 'locate' occurs!";
-  var pos = str.lastIndexOf("locate");
-  document.write(pos);
-</pre>
-  <script>
-  var str = "Please locate where 'locate' occurs!";
-  var pos = str.lastIndexOf("locate");
-  document.write(pos);
-  </script>
-
-<p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
-<pre>
-  var str = "Please locate where 'locate' occurs!";
-  var pos = str.indexOf("John");
-  document.write(pos);
-</pre>
-
-  <script>
-  var str = "Please locate where 'locate' occurs!";
-  var pos = str.indexOf("John");
-  document.write(pos);
-  </script>
-
-  <p>Both methods accept a second parameter as the starting position for the search:</p>
-  <pre>
-    var str = "Please locate where 'locate' occurs!";
-    var pos = str.indexOf("locate",15);
-    document.write(pos);
-  </pre>
-
-  <script>
-    var str = "Please locate where 'locate' occurs!";
-    var pos = str.indexOf("locate",15);
-    document.write(pos);
-    </script>
-  <p>The lastIndexOf() methods searches backwards (from the end to the beginning),<br> meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.</p>
-  <p>Remember that the lastIndexOf() method searches backwards, so position 15 means start the search at position 15, and search to the beginning.</p>
-  <p>Position 15 is position 15 from the beginning.</p>
-  <pre>
-    var str = "Please locate where 'locate' occurs!";
-    var pos = str.lastIndexOf("locate", 15);
-    document.write(pos);
-  </pre>
-
-  <script>
-    var str = "Please locate where 'locate' occurs!";
-    var pos = str.lastIndexOf("locate", 15);
-    document.write(pos);
-    </script>
-
-  <h2>Searching for a String in a String</h2>
-  <pre>  var str = "Please locate where 'locate' occurs!";
-      var pos = str.search("locate");  
-  </pre>    
-    <script>
-    var str = "Please locate where 'locate' occurs!";
-    var pos = str.search("locate");
-    document.write(pos);
-    </script>
-  <p>
-  <mark>
-    
-the two methods are NOT equal. These are the differences:
-
-The search() method cannot take a second start position argument.
-The indexOf() method cannot take powerful search values (regular expressions).
-  </mark></p>
-    
-  <h2>Extracting String Parts</h2>
-    <p>There are 3 methods for extracting a part of a string:</p>
-
-   <h2>The slice() Method</h2> 
-   <p>slice() extracts a part of a string and returns the extracted part in a new string.  </p>
-   <pre>
-      var str = "Apple, Banana, Kiwi";
-      var res = str.slice(7,13);
-      var res1 = str.slice(7);
-      var res2 = str.slice(-12);
-      document.write(res2 );
-      document.write(res );
-      document.write(res1);  
-   </pre>
-   <script>
-    var str = "Apple, Banana, Kiwi";
-    var res = str.slice(7,13);
-    var res1 = str.slice(7);
-    var res2 = str.slice(-12);
-    document.write(res2 +"</br>");
-    document.write(res +"</br>");
-    document.write(res1); 
-
-    </script>
-
-  <h2>The substring() Method</h2>
-    <p>substring() is similar to slice().<br>
-
-      The difference is that substring() cannot accept negative indexes.</p>
-      <pre>
-        var str = "Apple, Banana, Kiwi";
-        var res = str.substring(14,19);
-        document.write(res);
-      </pre>
-      <script>
-        var str = "Apple, Banana, Kiwi";
-        var res = str.substring(14,19);
-        document.write(res);
-        </script>
-       <br><br> <mark>If you omit the second parameter, substring() will slice out the rest of the string.
-
-        </mark>
-
-  <h2>The substr() Method</h2>
-  <p>substr() is similar to slice().<br>
-
-    The difference is that the second parameter specifies the length of the extracted part.</p>
-    <pre>
-      var str = "Apple, Banana, Kiwi";
-      var res = str.substr(7,6);
-      document.write(res);
-    </pre>
-    <script>
-      var str = "Apple, Banana, Kiwi";
-      var res = str.substr(7,6);
-      document.write(res);
-      </script>
-
-   <br><br><mark>
-        If you omit the second parameter, substr() will slice out the rest of the string.
-      </mark>
-      <pre>
-        var str = "Apple, Banana, Kiwi";
-        var res = str.substr(7);
-        document.write(res);  
-        var res = str.substr(-4);
-        document.write(res);
-      </pre>
-
-      <script>
-        var str = "Apple, Banana, Kiwi";
-        var res = str.substr(7);
-        document.write(res + "</br>");
-        var res = str.substr(-4);
-        document.write(res);
-        </script>
-    <h2>Replacing String Content</h2>
-    <p>The replace() method replaces a specified value with another value in a string:</p>
-    <pre> 
-      function myFunction() {
-      var str = document.getElementById("demo").innerHTML; 
-      var txt = str.replace("Microsoft","linux");
-      document.getElementById("demo").innerHTML = txt;
+<table border="0" style="margin: 0 auto; width:500px">
+    <tr>
+        <td colspan="2"><h2>Print Multiplication Table using JavaScript</h2></td>
+    </tr>
+ 
+    <tr>
+        <td width="28%">Enter a Number : </td>
+        <td><input type="number" onchange="printTable(this)"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><span id="mul"></span></td>
+    </tr>
+</table>
+ 
+<script>
+function printTable(num) {
+    var input = num.value;
+    if(!isNaN(input)) {
+        var table="";
+        var number="";
+        for(i=1;i<=10;i++) {
+            number = input * i;
+            table +=  input + " x " + i + " = " + number + "<br/>";
+        }
+        document.getElementById("mul").innerHTML = table;
     }
-  </pre>
-
-    <button onclick="myFunction()">Try it</button>
-
-    <p id="demo">Please visit Microsoft!</p>
-
-    <script>
-    function myFunction() {
-      var str = document.getElementById("demo").innerHTML; 
-      var txt = str.replace("Microsoft","linux");
-      document.getElementById("demo").innerHTML = txt;
+    else {
+        document.getElementById("mul").innerHTML = "Please Enter a valid Number";
     }
-    </script>
-
-    <br><br><mark>
-      The replace() method does not change the string it is called on. It returns a new string.<br><br>
-
-By default, the replace() method replaces only the first match:
-    </mark>
-    
-
-    <h2>concat() Method</h2>
-    <pre>
-      var text1 = "Hello";
-      var text2 = "World";
-      var text3 = text1.concat(" ", text2);
-      document.write(text3);
-    </pre>
-    <script>
-      var text1 = "Hello";
-      var text2 = "World";
-      var text3 = text1.concat(" ", text2);
-      document.write(text3);
-    </script>
-
-    <h2>String.trim()</h2>
-    <p>The trim() method removes whitespace from both sides of a string:    </p>
-    <pre>
-      var str = "       Hello World!        ";
-      document.write(str.trim());
-    </pre>
-    <script>
-      var str = "       Hello World!        ";
-      document.write(str.trim());
-    </script>
-    <h2>The charAt() Method</h2>
-    <p>The charAt() method returns the character at a specified index (position) in a string:    </p>
-    <pre>
-      var str = "HELLO WORLD";
-      document.write(str.charAt(6)); 
-    </pre>
-
-    
-
-    <script>
-      var str = "HELLO WORLD";
-      document.write(str.charAt(6));  
-    </script>
-
-    <h2>charCodeAt() </h2>
-    <p>The charCodeAt() method returns the unicode of the character at a specified index in a string: </p>
-    <pre>
-      var str = "HELLO WORLD";
-      document.write(str.charCodeAt(2));
-    </pre>
-    <Script>
-      var str = "HELLO WORLD";
-      document.write(str.charCodeAt(2));
-    </Script>
-
-    <h2>Converting a String to an Array</h2>
-    <p>A string can be converted to an array with the split() method:</p>
-    <pre>
-      var txt = "a,b,c,d,e";   // String
-      document.write(txt.split(" "));          // Split on comma
-    </pre>
-    <script>
-      var txt = "a,b,c,d,e";   // String
-      document.write(txt.split(" "));          // Split on comma
-    </script>
-
-
-    <h1><mark>Array Methods</mark></h1>
-
-    <h2>Arrays to Strings</h2>
-    <h2>toString()</h2>
-    <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
-    <pre>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.write(fruits.toString());
-    </pre>
-    <script>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.write(fruits.toString());
-    </script>
-
-    <br><br><mark>
-      The join() method also joins all array elements into a string.<br>
-
-      It behaves just like toString(), but in addition you can specify the separator:
-    </mark>
-
-    <h2>join()</h2>
-    <pre>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.write(fruits.join("*"));
-    </pre>
-    <script>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.write(fruits.join("*"));
-    </script>
-
-    <h2>Deleting Elements</h2>
-    <pre>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.write( fruits[0]); 
-    </pre>
-    <script>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.write( fruits[0]); 
-    </script>
-
-    <h2>Splicing an Array
-    </h2>
-    <p>The splice() method can be used to add new items to an array:    </p>
-    <p>The splice() method adds new elements to an array.</p>
-    <pre>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
-      document.getElementById("demo1").innerHTML = "Original Array:<br>" + fruits;
-      function myFunction() {
-        fruits.splice(2, 0, "Lemon", "Kiwi");
-        document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;
-      }
-    </pre>
-
-    <button onclick="myFunction()">Try it</button>
-    
-    <p id="demo1"></p>
-    <p id="demo2"></p>
-    
-    <script>
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-    document.getElementById("demo1").innerHTML = "Original Array:<br>" + fruits;
-    function myFunction() {
-      fruits.splice(2, 0, "Lemon", "Kiwi");
-      document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;
-    }
-    </script>
-
-    <h2>Merging (Concatenating) Arrays</h2>
-    <pre>
-      var myGirls = ["Cecilie", "Lone"];
-      var myBoys = ["Emil", "Tobias", "Linus"];
-      var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
-      document.write(myChildren);
-    </pre>
-    <script>
-      var myGirls = ["Cecilie", "Lone"];
-      var myBoys = ["Emil", "Tobias", "Linus"];
-      var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
-      document.write(myChildren);
-    </script>
-    
-    <h2>Slicing an Array</h2>
-    <p>The slice() method slices out a piece of an array into a new array.<br>
-
-      This example slices out a part of an array starting from array element 1 ("Orange"):</p>
-      <pre>
-        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-        var citrus = fruits.slice(1);
-        var citrus2 = fruits.slice(1, 2);
-        document.write(citrus+"<br/>");
-        document.write(citrus2);  
-      </pre>
-      <p>The slice() method can take two arguments like slice(1, 2).</p>
-
-      <script>
-        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-        var citrus = fruits.slice(1);
-        var citrus2 = fruits.slice(1, 2);
-        document.write(citrus+"<br/>");
-        document.write(citrus2);
-      </script>
-
-      <h2>Automatic toString()</h2>
-      <pre>
-        var fruits = ["Banana", "Orange", "Apple", "Mango"];
-        document.write(fruits.toString());
-      </pre>
-      <script>
-        var fruits = ["Banana", "Orange", "Apple", "Mango"];
-        document.write(fruits.toString());
-      </script>
-
-    
-
+}
+</script>
 </body>
-</html>
+</html

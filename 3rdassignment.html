@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 3</title>
+    <style>
+          body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    </style>
+</head>
 <body>
-<title>Assignment3</title>
-<p>Click the button to demonstrate the prompt box.</p>
+    <h1 id="demo"></h1>
+    <p id ="time"></p>
+    <button onclick="myFunction()">Toggle dark mode</button>
+      <script>
+        var name = prompt("Enter your name");
+        // document.write(`welcome ${name} to Letsupgrade`);
+        document.getElementById("demo").innerHTML = `welcome ${name} to letsupgrade`;
 
-<button onclick="myFunction()">check eligibility</button>
+        // for showing the current time to user
+        const ctime = document.getElementById('time');
 
-<p id="demo"></p>
 
-<script>
-function myFunction() {
-  var age = prompt("Please enter your age", "18");
-  if (age >=18) {
-    document.getElementById("demo").innerHTML =
-    "you are"+ age + "year old so you can drink";
-  }
-  else{
-  document.getElementById("demo").innerHTML =
-    "you are"+ age + " year old you cannot drink";
-  }
-}
-</script>
+        function clock(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            ctime.innerText = time;
+        }
 
+        // clock();
+
+        setInterval(clock,1000);
+
+        function myFunction() {
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+        }
+
+      </script>  
 </body>
 </html>
